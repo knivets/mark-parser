@@ -9,10 +9,10 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'vnbot'
+BOT_NAME = 'markparser'
 
-SPIDER_MODULES = ['vnbot.spiders']
-NEWSPIDER_MODULE = 'vnbot.spiders'
+SPIDER_MODULES = ['markparser.spiders']
+NEWSPIDER_MODULE = 'markparser.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -62,7 +62,7 @@ NEWSPIDER_MODULE = 'vnbot.spiders'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'vnbot.pipelines.VnbotPipeline': 300,
+    'markparser.pipelines.MarkparserPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

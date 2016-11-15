@@ -8,7 +8,7 @@
 import scrapy
 
 
-class VnbotItem(scrapy.Item):
+class MarkparserItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

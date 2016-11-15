@@ -9,7 +9,7 @@ import pdb
 import json
 from .storage import get_session, Place
 
-class VnbotPipeline(object):
+class MarkparserPipeline(object):
 	def open_spider(self, spider):
 		self.session = get_session()
 
