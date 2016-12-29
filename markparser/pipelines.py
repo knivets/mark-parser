@@ -7,25 +7,16 @@
 
 import pdb
 import json
-from .storage import get_session, Place
+#from .storage import get_session, Place
 
 class MarkparserPipeline(object):
 	def open_spider(self, spider):
-		self.session = get_session()
+		self.file = open('items.jl', 'w')
 
 	def close_spider(self, spider):
-		pass
-
-	def store_item(self, item):
-		record = Place(**item)
-		self.session.add(record)
-		self.session.commit()
+		self.file.close()
 
 	def process_item(self, item, spider):
-		for row in item['data']:
-			record = row
-			record['title_ru'] = row['title']
-			record['title_ua'] = row['title']
-			del record['title']
-			self.store_item(record)
+		line = json.dumps(dict(item)) + "\n"
+		self.file.write(line)
 		return item
