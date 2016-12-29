@@ -13,3 +13,4 @@ class PlaceItem(scrapy.Item):
   address = scrapy.Field()
   phone = scrapy.Field()
   website = scrapy.Field()
+  kind = scrapy.Field()
