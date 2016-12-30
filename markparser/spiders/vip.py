@@ -54,5 +54,5 @@ class VipSpider(scrapy.Spider):
 
     def parse_place(self, response):
       address = response.xpath("//span[contains(text(),'Адрес:')]/ancestor-or-self::p/parent::td/following-sibling::td//span/text()").extract()
-      response.xpath("//span[contains(text(),'Телефоны:')]/ancestor-or-self::p/parent::td/following-sibling::td//span/text()").extract()
+      phone = response.xpath("//span[contains(text(),'Телефоны:')]/ancestor-or-self::p/parent::td/following-sibling::td//span/text()").extract()
       pass
