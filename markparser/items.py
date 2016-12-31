@@ -11,6 +11,7 @@ import scrapy
 class PlaceItem(scrapy.Item):
   title = scrapy.Field()
   address = scrapy.Field()
+  city = scrapy.Field()
   phone = scrapy.Field()
   website = scrapy.Field()
   kind = scrapy.Field()
